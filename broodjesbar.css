@@ -1,0 +1,196 @@
+/*** FONTS ***/
+@font-face {
+    font-family: Zagist;
+    src: url(fonts/Zagist-Regular.otf);
+  }
+  @font-face {
+    font-family: Mouly;
+    src: url(fonts/Mouly.ttf);
+  }
+/* TYPOGRAFIE */
+body {
+    font-family: Zagist, sans-serif;
+    font-size: 100%;
+ }
+ a, a:visited, a:hover, a:active {
+    text-decoration:none;
+ }
+
+ nav ul li {
+   font-size: 1.25em;
+   font-weight: bold;
+ }
+ .top_broodjesMenu h1 {
+  font-family: Mouly, sans-serif;
+  font-size: 4em;
+  font-weight: 100;
+ }
+ footer {
+  text-align: center;
+ }
+  
+ /* KLEURENSCHEMAS */
+ body {
+    background: #e9e6dd;
+    color:#333;
+ }
+ header, footer {
+    background:#FEE7BE;
+    color: #4E3737;
+ }
+ .container {
+   background-color: #fff6e9;
+ }
+ a, a:visited {
+   color: #5C6481;
+ }
+ a:hover {
+   color: #424361;
+ }
+ .feedback {
+  color: green;
+ }
+ /**** STRUCTUUR EN LAY-OUT ****/
+ body {
+    width: 1024px;
+    min-height: 100vh;
+    margin: 0 auto;
+ }
+ .container {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+ header {
+   position: relative;
+   border-bottom: 1px solid gray;
+ }
+ footer {
+  border-top: 1px solid gray;
+  padding: 0.5rem 0;
+ }
+ footer p{
+  margin-bottom: 0;
+ }
+
+ header img {
+   float: left;
+ }
+ nav ul { 
+   list-style: none;
+   position: absolute;
+   right: 5%;
+   bottom: 1%;
+   
+ }
+ nav ul li {
+   display: inline-block;
+   margin: 0.2em;
+ }
+
+ /**** DRIEHOEK CLIP ****/
+ .driehoek_top {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  background: linear-gradient(to right ,#655643, #AA846F);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+ }
+
+  .driehoek_bottom {
+  width: 100%;
+  height: 20em;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  background: linear-gradient(to left ,#655643, #AA846F);
+  clear: both;
+ }
+
+ /**** MENU TOP ****/
+ .top_broodjesMenu{
+  width: 100%;
+  height: 20em;
+  position: relative;
+ }
+ .top_broodjesMenu img:first-of-type{
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(#FEE7BE, #AA846F);
+  position: absolute;
+  right: 15%;
+  top: 10%;
+  rotate: 10deg;
+ }
+ .top_broodjesMenu img:last-of-type{
+  border: 5px solid ;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(#FEE7BE, #AA846F);
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  rotate: -15deg;
+ }
+ .top_broodjesMenu h1 {
+  position: absolute;
+  bottom: -15%;
+  right: 35%;
+ }
+
+ /**** MENU INHOUD ****/
+ .menuInhoud {
+  margin: 3em 1em;
+ }
+ .menuInhoud dl {
+  columns: 2;
+ }
+ .menuInhoud dt {
+  font-size: 1.15em;
+  margin-top: 0.25em;
+  font-weight: bold;
+ }
+ .menuInhoud dd {
+  break-before: avoid;
+  margin-left: 1em;
+ }
+ dd .omschrijving {
+  display: inline-block;
+  width: 85%;
+  height: auto;
+ }
+ dd .prijs {
+  float: right;
+ }
+
+ /**** BESTELLEN FORM ****/
+ .bestellenForm {
+  margin-left: 1em;
+  flex-grow: 1;
+ }
+
+ label {
+  display: block;
+  margin-bottom: 1em;
+ }
+
+ /**** TABEL STYLE ****/
+ table {
+  width: 100%;
+  text-align: center;
+ }
+
+ /*
+clearfix hack
+http://nicolasgallagher.com/micro?clearfix?hack/
+*/
+.clearFix:before, .clearFix:after {
+   content: " ";
+   display: table;
+}
+.clearFix:after {
+   clear: both;
+}
+/* enkel voor IE6/7 */
+.clearFix {
+   zoom: 1;
+}
